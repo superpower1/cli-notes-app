@@ -12,7 +12,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "add": "node index.js add",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Haofu Zhu",

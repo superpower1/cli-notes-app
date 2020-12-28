@@ -20,14 +20,21 @@ yargs.command({
       type: 'string'
     }
   },
-  handler: (argv) => utils.addNote(argv),
+  handler: argv => utils.addNote(argv),
 })
 
 // Customize yargs remove command
 yargs.command({
   command: 'remove',
   describe: 'Remove a note',
-  handler: () => console.log('Removing a new note!')
+  builder: {
+    title: {
+      describe: 'Note title',
+      demandOption: true,
+      type: 'string'
+    }
+  },
+  handler: argv => utils.removeNote(argv),
 })
 
 // Customize yargs list command
