@@ -45,7 +45,29 @@ const removeNote = ({ title }) => {
   }
 }
 
+const listNote = () => {
+  const notes = loadNotes();
+
+  Object.keys(notes).forEach((title) => {
+    console.log(chalk.inverse.bold(title));
+    console.log(notes[title], '\n')
+  })
+}
+
+const readNote = ({ title }) => {
+  const notes = loadNotes();
+
+  if (notes[title]) {
+    console.log(chalk.inverse.bold(title));
+    console.log(notes[title], '\n')
+  } else {
+    console.log(chalk.red(`Cannot find note with title '${title}'`))
+  }
+}
+
 module.exports = {
   addNote,
-  removeNote
+  removeNote,
+  listNote,
+  readNote
 }
