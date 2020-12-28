@@ -1,0 +1,20 @@
+{
+  "name": "cli-notes-app",
+  "version": "1.0.0",
+  "description": "simple cli notes app",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "add": "node index.js add",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Haofu Zhu",
+  "license": "ISC"
+}
